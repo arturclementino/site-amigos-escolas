@@ -1,140 +1,75 @@
-<section class="relative min-h-screen overflow-hidden bg-slate-950">
+---
+// src/components/Hero.astro
+---
 
-  <!-- Imagem de fundo -->
-  <div class="absolute inset-0">
-    <img
-      src="/images/cacine-hero.jpg"
-      alt="Alunos da Escola Betel em Cacine"
-      class="w-full h-full object-cover"
-    />
+<section class="relative min-h-screen flex items-center px-6 overflow-hidden bg-[#0F2E1F]">
 
-    <div class="absolute inset-0 bg-black/65"></div>
-
-    <div class="absolute inset-0 bg-linear-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
+  <div class="absolute inset-0 z-0">
+    <img src="/images/capa-hero.JPG"
+     alt="Dia das Crianças na Escola Betel" 
+     class="w-full h-full object-cover filter saturate-[0.2] brightness-[0.65]" />
+    <div class="absolute inset-0 bg-gradient-to-t from-[#0F2E1F] via-[#0F2E1F]/60 to-[#0F2E1F]/30"></div>
   </div>
 
-  <!-- Conteúdo -->
-  <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 min-h-screen flex items-center">
-
-    <div class="max-w-4xl">
-
-      <!-- Selo -->
-      <div class="inline-flex items-center gap-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-5 py-2 mb-8">
-
-        <div class="w-2 h-2 rounded-full bg-emerald-400"></div>
-
-        <span class="text-sm text-white font-medium">
-          Desde 2009 transformando comunidades no Sul da Guiné-Bissau
-        </span>
-
-      </div>
-
-      <!-- Headline -->
-      <h1 class="text-5xl md:text-7xl xl:text-8xl font-black text-white leading-none tracking-tight">
-
-        Transformando
-        <span class="text-orange-400">
-          comunidades
-        </span>
-        através da educação.
-
-      </h1>
-
-      <!-- Texto -->
-      <p class="mt-8 text-lg md:text-2xl text-slate-200 leading-relaxed max-w-3xl">
-
-        Há mais de 15 anos a Associação Amigos das Escolas atua em Cacine,
-        promovendo educação de excelência, desenvolvimento comunitário,
-        saúde preventiva e oportunidades reais para centenas de famílias
-        do povo Nalu e de outras comunidades da região.
-
-      </p>
-
-      <!-- Botões -->
-      <div class="mt-10 flex flex-col sm:flex-row gap-4">
-
-        <a
-          href="/doar"
-          class="bg-orange-600 hover:bg-orange-700 transition-all text-white font-bold px-8 py-4 rounded-xl shadow-lg"
-        >
-          Quero Ser Parceiro
-        </a>
-
-        <a
-          href="#projetos"
-          class="bg-white/10 hover:bg-white/20 border border-white/20 backdrop-blur-md transition-all text-white px-8 py-4 rounded-xl"
-        >
-          Conheça os Projetos
-        </a>
-
-      </div>
-
-      <!-- Estatísticas -->
-      <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 mt-20">
-
-        <div>
-          <div class="text-4xl font-black text-orange-400">
-            842+
-          </div>
-
-          <div class="text-sm uppercase tracking-widest text-slate-300 mt-2">
-            Alunos Atendidos
-          </div>
-        </div>
-
-        <div>
-          <div class="text-4xl font-black text-orange-400">
-            15+
-          </div>
-
-          <div class="text-sm uppercase tracking-widest text-slate-300 mt-2">
-            Anos de Atuação
-          </div>
-        </div>
-
-        <div>
-          <div class="text-4xl font-black text-orange-400">
-            91
-          </div>
-
-          <div class="text-sm uppercase tracking-widest text-slate-300 mt-2">
-            Tabancas
-          </div>
-        </div>
-
-        <div>
-          <div class="text-4xl font-black text-orange-400">
-            100+
-          </div>
-
-          <div class="text-sm uppercase tracking-widest text-slate-300 mt-2">
-            Famílias Assistidas
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-
+  <div class="absolute right-0 top-1/2 -translate-y-1/2 z-0 pointer-events-none select-none overflow-hidden">
+    <span class="font-['Playfair_Display'] font-black text-white/[0.03] leading-none"
+          style="font-size:clamp(220px,36vw,560px);line-height:0.85">15K</span>
   </div>
 
-  <!-- Scroll -->
-  <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-20">
+  <div class="relative z-10 max-w-7xl mx-auto w-full pt-28 pb-20">
 
-    <div class="flex flex-col items-center text-white/70">
-
-      <span class="text-xs uppercase tracking-[0.3em] mb-3">
-        Explore
+    <div class="flex items-center gap-3 mb-8">
+      <span class="block w-8 h-px bg-[#E8A020]"></span>
+      <span class="text-[#E8A020] font-bold tracking-[0.22em] uppercase text-xs">
+        Cacine · Guiné-Bissau · Desde 2009
       </span>
+    </div>
 
-      <div class="w-6 h-10 border border-white/30 rounded-full flex justify-center">
+    <h1 class="font-['Playfair_Display'] leading-[1.05] tracking-tight mb-8">
+      <span class="block text-white font-bold italic"
+            style="font-size:clamp(2.2rem,6vw,5rem)">A educação é a semente.</span>
+      <span class="block text-[#E8A020] font-bold"
+            style="font-size:clamp(2.2rem,6vw,5rem)">O futuro é a colheita.</span>
+    </h1>
 
-        <div class="w-1.5 h-3 bg-white rounded-full mt-2 animate-bounce"></div>
+    <p class="text-base md:text-lg text-white/65 font-light leading-relaxed mb-10 max-w-xl">
+      Há 15 anos transformamos o Sul da Guiné-Bissau com educação, moradia, água potável
+      e tecnologia — para que o <strong class="text-white font-semibold">Povo Nalu </strong>
+      e comunidades vizinhas construam o próprio futuro.
+    </p>
 
+    <div class="flex flex-col sm:flex-row gap-3">
+      <a href="/doar"
+         class="inline-flex items-center justify-center bg-[#C44B1D] hover:bg-[#D35400]
+                text-white font-bold py-4 px-9 rounded-full text-sm transition-all tracking-wide shadow-xl">
+        Financiar um Projeto
+      </a>
+      <a href="#projetos"
+         class="inline-flex items-center justify-center bg-white/10 hover:bg-white/20
+                text-white border border-white/20 font-semibold py-4 px-9 rounded-full
+                text-sm transition-all">
+        Ver Nossos Projetos &rarr;
+      </a>
+    </div>
+
+    <div class="flex flex-wrap gap-8 mt-16 pt-10 border-t border-white/10">
+      <div>
+        <p class="font-['Playfair_Display'] text-3xl font-bold text-white">15.000+</p>
+        <p class="text-xs text-white/40 uppercase tracking-widest mt-0.5">Alunos</p>
       </div>
-
+      <div>
+        <p class="font-['Playfair_Display'] text-3xl font-bold text-white">91+</p>
+        <p class="text-xs text-white/40 uppercase tracking-widest mt-0.5">Tabancas</p>
+      </div>
+      <div>
+        <p class="font-['Playfair_Display'] text-3xl font-bold text-white">15+</p>
+        <p class="text-xs text-white/40 uppercase tracking-widest mt-0.5">Anos</p>
+      </div>
+      <div>
+        <p class="font-['Playfair_Display'] text-3xl font-bold text-white">1.000+</p>
+        <p class="text-xs text-white/40 uppercase tracking-widest mt-0.5">Famílias</p>
+      </div>
     </div>
 
   </div>
-
 </section>
