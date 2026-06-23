@@ -1,4 +1,5 @@
 ---
+// src/components/ProjectsGrid.astro
 ---
 <section id="projetos" class="py-24 bg-white border-t border-slate-100">
   <div class="max-w-7xl mx-auto px-6">
@@ -15,6 +16,7 @@
     </div>
 
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      
       <div class="project-card bg-[#F7F5F0] rounded-2xl p-8 flex flex-col">
         <div class="w-11 h-11 rounded-xl bg-forest-900 flex items-center justify-center mb-6 shrink-0">
           <span class="text-saffron text-xl">🏫</span>
@@ -22,10 +24,66 @@
         <p class="text-xs font-black text-ember uppercase tracking-widest mb-2">Projeto 01</p>
         <h3 class="font-display text-xl font-bold text-forest-900 mb-3">Escola Betel de Cacine</h3>
         <p class="text-sm text-slate-500 font-light leading-relaxed grow">
-          Ciclo educacional completo do pré-escolar ao 12.º ano, com merenda diária para 842 alunos.
+          Ciclo educacional completo do pré-escolar ao 12.º ano, com merenda diária para 800+ alunos. A segurança alimentar é decisiva para reter crianças numa região onde a fome é um desafio cotidiano.
         </p>
         <div class="mt-6 pt-6 border-t border-slate-200">
-          <p class="text-2xl font-black text-forest-900 font-display">842 <span class="text-sm font-bold text-slate-400">alunos</span></p>
+          <p class="text-2xl font-black text-forest-900 font-display">15.000+ <span class="text-sm font-bold text-slate-400">alunos</span></p>
+        </div>
+      </div>
+
+      <div class="project-card bg-[#F7F5F0] rounded-2xl p-8 flex flex-col">
+        <div class="w-11 h-11 rounded-xl bg-forest-900 flex items-center justify-center mb-6 shrink-0">
+          <span class="text-saffron text-xl">🏠</span>
+        </div>
+        <p class="text-xs font-black text-ember uppercase tracking-widest mb-2">Projeto 02</p>
+        <h3 class="font-display text-xl font-bold text-forest-900 mb-3">Casa do Estudante</h3>
+        <p class="text-sm text-slate-500 font-light leading-relaxed grow">
+          Internato para jovens de tabancas isoladas na floresta profunda, onde não há ensino secundário. Oferece moradia, alimentação e suporte tutorial para que a distância não seja um obstáculo ao futuro.
+        </p>
+        <div class="mt-6 pt-6 border-t border-slate-200">
+          <p class="text-sm font-bold text-slate-400 uppercase tracking-widest">Moradia · Alimentação · Tutoria</p>
+        </div>
+      </div>
+
+      <div class="project-card bg-forest-900 rounded-2xl p-8 flex flex-col">
+        <div class="w-11 h-11 rounded-xl bg-saffron/20 border border-saffron/30 flex items-center justify-center mb-6 shrink-0">
+          <span class="text-saffron text-xl">📻</span>
+        </div>
+        <p class="text-xs font-black text-saffron uppercase tracking-widest mb-2">Projeto 03</p>
+        <h3 class="font-display text-xl font-bold text-white mb-3">Rádio Voz de Paz FM</h3>
+        <p class="text-sm text-white/55 font-light leading-relaxed grow">
+          107.0 MHz — a voz da região de Tombali. Ultrapassa as barreiras da floresta com campanhas de saúde pública, alfabetização à distância e promoção de uma cultura de paz nas comunidades.
+        </p>
+        <div class="mt-6 pt-6 border-t border-white/10">
+          <p class="text-sm font-bold text-saffron uppercase tracking-widest">107.0 MHz · No Ar</p>
+        </div>
+      </div>
+
+      <div class="project-card bg-[#F7F5F0] rounded-2xl p-8 flex flex-col">
+        <div class="w-11 h-11 rounded-xl bg-forest-900 flex items-center justify-center mb-6 shrink-0">
+          <span class="text-saffron text-xl">💧</span>
+        </div>
+        <p class="text-xs font-black text-ember uppercase tracking-widest mb-2">Projeto 04</p>
+        <h3 class="font-display text-xl font-bold text-forest-900 mb-3">Projeto Água Potável</h3>
+        <p class="text-sm text-slate-500 font-light leading-relaxed grow">
+          Perfuração e manutenção de poços em tabancas vulneráveis. Reduz drasticamente doenças de veiculação hídrica e mortalidade infantil — resolvendo um dos maiores problemas de saúde pública da Guiné-Bissau.
+        </p>
+        <div class="mt-6 pt-6 border-t border-slate-200">
+          <p class="text-sm font-bold text-slate-400 uppercase tracking-widest">Engenharia Humanitária</p>
+        </div>
+      </div>
+
+      <div class="project-card bg-[#F7F5F0] rounded-2xl p-8 flex flex-col">
+        <div class="w-11 h-11 rounded-xl bg-forest-900 flex items-center justify-center mb-6 shrink-0">
+          <span class="text-saffron text-xl">📚</span>
+        </div>
+        <p class="text-xs font-black text-ember uppercase tracking-widest mb-2">Projeto 05</p>
+        <h3 class="font-display text-xl font-bold text-forest-900 mb-3">Biblioteca & Inclusão Digital</h3>
+        <p class="text-sm text-slate-500 font-light leading-relaxed grow">
+          Biblioteca Régulo Tcherno Camará com laboratório de informática. Conecta jovens ao conhecimento global e ao mercado de trabalho com ferramentas concretas de competitividade para além de Cacine.
+        </p>
+        <div class="mt-6 pt-6 border-t border-slate-200">
+          <p class="text-sm font-bold text-slate-400 uppercase tracking-widest">Tecnologia · Acervo · Pesquisa</p>
         </div>
       </div>
 
@@ -39,7 +97,7 @@
         <p class="text-xs font-black text-white/60 uppercase tracking-widest mb-2">Projeto 06</p>
         <h3 class="font-display text-xl font-bold text-white mb-3">Ginásio Poliesportivo</h3>
         <p class="text-sm text-white/75 font-light leading-relaxed grow">
-          Complexo poliesportivo para lazer, cultura e integração social. O esporte é nossa ferramenta pedagógica.
+          Complexo poliesportivo para lazer, cultura e integração social. O esporte é nossa ferramenta pedagógica para prevenir o envolvimento da juventude em situações de risco social.
         </p>
         <div class="mt-6 pt-6 border-t border-white/20">
           <a href="/doar" class="inline-flex items-center gap-2 text-white font-bold text-sm hover:gap-4 transition-all">
@@ -47,6 +105,7 @@
           </a>
         </div>
       </div>
+
     </div>
   </div>
 </section>
