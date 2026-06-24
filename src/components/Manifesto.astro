@@ -1,13 +1,13 @@
 ---
 // src/components/Manifesto.astro
 ---
-<section class="py-28 bg-[#F7F5F0]">
-  <div class="max-w-6xl mx-auto px-6">
-    <div class="grid md:grid-cols-12 gap-12 items-start">
+<section class="py-20 sm:py-24 bg-[#F7F5F0]">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="grid md:grid-cols-12 gap-10 md:gap-12 items-start">
       <div class="md:col-span-4">
         <p class="text-xs font-bold text-ember tracking-[0.3em] uppercase mb-4">Quem Somos</p>
-        <div class="h-px w-full bg-slate-200 mb-6"></div>
-        <p class="text-sm text-slate-500 font-light leading-relaxed">
+        <div class="h-px w-14 bg-saffron mb-6"></div>
+        <p class="text-sm text-slate-600 font-light leading-relaxed">
           A AAEGB é uma organização humanitária com presença permanente no setor de Cacine, região de Tombali, no Sul da Guiné-Bissau. Atuamos junto ao Povo Nalu e comunidades vizinhas há mais de quinze anos.
         </p>
         <div class="mt-10 border-l-2 border-saffron pl-5">
@@ -25,9 +25,14 @@
         <p class="text-lg text-slate-600 font-light leading-relaxed mt-8">
           Diferente de ONGs que operam por campanhas, a AAEGB construiu um ecossistema permanente de transformação: escola, internato, rádio comunitária, água potável, biblioteca e tecnologia. Não oferecemos assistência temporária — entregamos às comunidades as ferramentas para que se tornem <strong class="text-slate-800 font-semibold">autônomas e agentes do seu próprio desenvolvimento</strong>.
         </p>
-        <a href="/quem-somos" class="inline-flex items-center gap-2 mt-8 text-xs font-black text-ember uppercase tracking-widest hover:gap-4 transition-all">
-          Nossa História Completa <span>→</span>
-        </a>
+        <div class="mt-8 flex flex-col sm:flex-row gap-4">
+          <a href="/quem-somos" class="inline-flex items-center justify-center rounded-full bg-forest-900 px-6 py-3 text-sm font-bold text-white uppercase tracking-[0.28em] hover:bg-forest-800 transition-all">
+            Nossa História Completa
+          </a>
+          <a href="/projetos" class="inline-flex items-center justify-center rounded-full bg-white/90 px-6 py-3 text-sm font-semibold text-forest-900 uppercase tracking-[0.28em] hover:bg-white transition-all">
+            Ver Projetos
+          </a>
+        </div>
       </div>
     </div>
   </div>

@@ -1,30 +1,26 @@
 ---
 // src/components/Hero.astro
 ---
-<section class="relative min-h-screen flex items-center px-6 overflow-hidden bg-forest-900">
+<section class="relative min-h-[72vh] flex items-center px-4 sm:px-6 overflow-hidden bg-forest-900">
   
   <div class="absolute inset-0 z-0">
     <img src="/site-amigos-escolas/images/capa-hero.jpg" 
     alt="Dia das Crianças na Escola Betel" class="w-full h-full object-cover img-dim" />
-    <div class="absolute inset-0 bg-linear-to-t from-forest-900 via-forest-900/60 to-forest-900/30"></div>
+    <div class="absolute inset-0 bg-linear-to-t from-forest-900 via-forest-900/70 to-forest-900/30"></div>
   </div>
 
-  <div class="absolute right-0 top-1/2 -translate-y-1/2 z-0 pointer-events-none select-none overflow-hidden">
-    <span class="font-display font-black text-white/5 leading-none" style="font-size: clamp(220px, 36vw, 560px); line-height: 0.85;">15K</span>
-  </div>
-
-  <div class="relative z-10 max-w-7xl mx-auto w-full pt-28 pb-20">
+  <div class="relative z-10 max-w-5xl mx-auto w-full pt-12 pb-14 md:pt-20 md:pb-16">
     
     <div class="flex items-center gap-3 mb-8">
       <span class="block w-8 h-px bg-saffron"></span>
-      <span class="text-saffron font-bold tracking-[0.22em] uppercase text-xs md:text-sm">
+      <span class="text-saffron font-bold tracking-[0.22em] uppercase text-[10px] sm:text-xs md:text-sm">
         Cacine · Guiné-Bissau · Desde 2009
       </span>
     </div>
 
-   <h1 class="font-display leading-[1.05] tracking-tight mb-8">
-      <span class="block text-white font-bold italic" style="font-size: clamp(3rem, 7vw, 6rem);">A educação é a semente.</span>
-      <span class="block text-saffron font-bold" style="font-size: clamp(3rem, 7vw, 6rem);">O futuro é a colheita.</span>
+   <h1 class="font-display leading-[1.05] tracking-tight mb-8 max-w-3xl">
+      <span class="block text-white font-bold italic" style="font-size: clamp(2.5rem, 7vw, 5rem);">A educação é a semente.</span>
+      <span class="block text-saffron font-bold" style="font-size: clamp(2.5rem, 7vw, 5rem);">O futuro é a colheita.</span>
     </h1>
 
     <p class="text-lg md:text-xl text-white/70 font-light leading-relaxed mb-10 max-w-2xl">
@@ -32,29 +28,29 @@
     </p>
 
     <div class="flex flex-col sm:flex-row gap-4">
-      <a href="/doar" class="inline-flex items-center justify-center bg-ember hover:opacity-90 text-white font-bold py-4 px-9 rounded-full text-sm md:text-base transition-all tracking-wide shadow-xl">
+      <a href="/doar" class="inline-flex w-full sm:w-auto items-center justify-center bg-ember hover:opacity-90 text-white font-bold py-3 px-6 sm:px-9 rounded-full text-sm md:text-base transition-all tracking-wide shadow-xl">
         Financiar um Projeto
       </a>
-      <a href="#projetos" class="inline-flex items-center justify-center bg-white/10 hover:bg-white/20 text-white border border-white/20 font-semibold py-4 px-9 rounded-full text-sm md:text-base transition-all">
+      <a href="#projetos" class="inline-flex w-full sm:w-auto items-center justify-center bg-white/10 hover:bg-white/20 text-white border border-white/20 font-semibold py-3 px-6 sm:px-9 rounded-full text-sm md:text-base transition-all">
         Ver Nossos Projetos &rarr;
       </a>
     </div>
 
-    <div class="flex flex-wrap gap-10 mt-16 pt-10 border-t border-white/10">
+    <div class="flex flex-wrap gap-8 mt-12 pt-8 border-t border-white/10">
       <div>
-        <p class="font-display font-bold text-white mb-1" style="font-size: 3rem;">15.000+</p>
+        <p class="font-display font-bold text-white mb-1 text-5xl md:text-[3rem]">15.000+</p>
         <p class="text-xs text-white/50 uppercase tracking-widest font-semibold">Alunos</p>
       </div>
       <div>
-        <p class="font-display font-bold text-white mb-1" style="font-size: 3rem;">91+</p>
+        <p class="font-display font-bold text-white mb-1 text-5xl md:text-[3rem]">91+</p>
         <p class="text-xs text-white/50 uppercase tracking-widest font-semibold">Tabancas</p>
       </div>
       <div>
-        <p class="font-display font-bold text-white mb-1" style="font-size: 3rem;">15+</p>
+        <p class="font-display font-bold text-white mb-1 text-5xl md:text-[3rem]">15+</p>
         <p class="text-xs text-white/50 uppercase tracking-widest font-semibold">Anos</p>
       </div>
       <div>
-        <p class="font-display font-bold text-white mb-1" style="font-size: 3rem;">1.000+</p>
+        <p class="font-display font-bold text-white mb-1 text-5xl md:text-[3rem]">1.000+</p>
         <p class="text-xs text-white/50 uppercase tracking-widest font-semibold">Famílias</p>
       </div>
     </div>

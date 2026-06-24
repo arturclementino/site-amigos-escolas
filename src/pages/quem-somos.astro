@@ -1,0 +1,52 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="Quem Somos | AAEGB" description="Conheça a missão, valores e história da Associação Amigos das Escolas de Guiné-Bissau.">
+  <Header />
+
+  <main class="bg-[#F7F5F0]">
+    <section class="bg-white py-24">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="grid gap-10 lg:grid-cols-[1.2fr_0.8fr] items-start">
+          <div>
+            <p class="text-xs font-bold text-ember uppercase tracking-[0.35em] mb-4">Quem Somos</p>
+            <h1 class="font-display text-4xl sm:text-5xl font-bold text-forest-900 leading-tight">Uma presença permanente em Cacine há mais de 15 anos.</h1>
+            <p class="mt-6 text-slate-600 leading-relaxed text-lg">A AAEGB não atua por campanhas passageiras. Construímos relações de confiança com o Povo Nalu e entregamos projetos que fortalecem a comunidade de dentro para fora.</p>
+          </div>
+          <div class="rounded-[2rem] border border-slate-200 bg-slate-50 p-8 shadow-sm">
+            <p class="text-xs uppercase tracking-[0.35em] text-saffron font-black mb-4">Nossa abordagem</p>
+            <ul class="space-y-4 text-sm text-slate-700 leading-relaxed">
+              <li><strong class="font-semibold">Sustentabilidade</strong>: cada ação é pensada para se manter no longo prazo.</li>
+              <li><strong class="font-semibold">Autonomia</strong>: nosso sucesso é quando a comunidade assume o protagonismo.</li>
+              <li><strong class="font-semibold">Transparência</strong>: prestamos contas em cada passo do caminho.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-[#F4F1EB] py-20 border-t border-slate-200">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="grid gap-12 lg:grid-cols-3">
+          <article class="rounded-[1.75rem] border border-slate-200 bg-white p-8 shadow-sm">
+            <p class="text-xs uppercase tracking-[0.35em] text-ember font-black mb-3">Missão</p>
+            <p class="text-slate-600 leading-relaxed">Promover educação, saúde e desenvolvimento local para criar oportunidades duradouras em Cacine.</p>
+          </article>
+          <article class="rounded-[1.75rem] border border-slate-200 bg-white p-8 shadow-sm">
+            <p class="text-xs uppercase tracking-[0.35em] text-ember font-black mb-3">Visão</p>
+            <p class="text-slate-600 leading-relaxed">Ver comunidades fortes, livres e autônomas, com acesso a aprendizado, infraestrutura e serviços essenciais.</p>
+          </article>
+          <article class="rounded-[1.75rem] border border-slate-200 bg-white p-8 shadow-sm">
+            <p class="text-xs uppercase tracking-[0.35em] text-ember font-black mb-3">Valores</p>
+            <p class="text-slate-600 leading-relaxed">Respeito, parceria, responsabilidade e construção coletiva para um futuro mais justo.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

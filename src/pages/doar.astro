@@ -1,0 +1,85 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="Doar | AAEGB" description="Apoie financeiramente os projetos sociais e educacionais da AAEGB em Cacine.">
+  <Header />
+
+  <main class="bg-[#F7F5F0]">
+    <section class="bg-forest-900 text-white py-24">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="grid gap-10 lg:grid-cols-[1.4fr_0.9fr] items-center">
+          <div>
+            <p class="text-xs font-bold text-saffron uppercase tracking-[0.35em] mb-4">Doe para mudar</p>
+            <h1 class="font-display text-4xl sm:text-5xl font-bold leading-tight">Sua doação chega a crianças, famílias e comunidades em Cacine.</h1>
+            <p class="mt-6 max-w-2xl text-white/80 leading-relaxed text-lg">
+              Contribua para educação, saúde, água potável e infraestrutura social. Cada apoio mantém projetos de construção de um futuro sustentável.
+            </p>
+            <div class="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
+              <a href="#formas" class="inline-flex items-center justify-center rounded-full bg-saffron px-6 py-3 text-sm font-bold uppercase tracking-[0.25em] text-forest-950 shadow-xl hover:opacity-95 transition">Ver formas de apoio</a>
+              <a href="#impacto" class="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/10 px-6 py-3 text-sm font-semibold uppercase tracking-[0.25em] text-white hover:bg-white/15 transition">Ver impacto</a>
+            </div>
+          </div>
+          <div class="rounded-[2rem] border border-white/10 bg-white/10 p-8 shadow-2xl backdrop-blur-xl">
+            <p class="text-xs uppercase tracking-[0.35em] text-saffron font-black mb-4">Sua doação</p>
+            <div class="space-y-4 text-sm text-white/80 leading-relaxed">
+              <p>100% dos recursos são destinados a projetos locais em Cacine.</p>
+              <p>Transparência, prestação de contas e uso responsável de cada contribuição.</p>
+              <p>Você escolhe se apoia educação, infraestrutura ou programas de saúde comunitária.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="formas" class="max-w-7xl mx-auto px-4 sm:px-6 py-20">
+      <div class="text-center mb-16">
+        <p class="text-xs font-bold text-ember uppercase tracking-[0.35em] mb-4">Como doar</p>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-forest-900">Escolha a forma de apoio que faz sentido para você.</h2>
+      </div>
+      <div class="grid gap-8 md:grid-cols-3">
+        <article class="rounded-[1.75rem] border border-slate-200 bg-white p-8 shadow-sm">
+          <p class="text-[10px] uppercase tracking-[0.35em] text-ember font-black mb-3">Doação única</p>
+          <h3 class="font-display text-xl font-bold text-forest-900 mb-4">Contribuição direta</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">Apoie rapidamente com uma única doação e acompanhe o impacto imediato nos projetos prioritários.</p>
+        </article>
+        <article class="rounded-[1.75rem] border border-slate-200 bg-white p-8 shadow-sm">
+          <p class="text-[10px] uppercase tracking-[0.35em] text-ember font-black mb-3">Doação mensal</p>
+          <h3 class="font-display text-xl font-bold text-forest-900 mb-4">Apoio contínuo</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">Contribua mensalmente para garantir estabilidade em atividades escolares, alimentação e manutenção de infraestrutura.</p>
+        </article>
+        <article class="rounded-[1.75rem] border border-slate-200 bg-white p-8 shadow-sm">
+          <p class="text-[10px] uppercase tracking-[0.35em] text-ember font-black mb-3">Campanha</p>
+          <h3 class="font-display text-xl font-bold text-forest-900 mb-4">Apoiador de projeto</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">Ajude a financiar iniciativas específicas como o ginásio, o internato ou os poços de água potável.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="impacto" class="bg-white py-20 border-t border-slate-200">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="grid gap-10 lg:grid-cols-[1.2fr_0.8fr] items-center">
+          <div>
+            <p class="text-xs font-bold text-ember uppercase tracking-[0.35em] mb-4">Impacto</p>
+            <h2 class="font-display text-3xl sm:text-4xl font-bold text-forest-900 leading-tight">Seu apoio mantém nossa presença em Cacine.</h2>
+            <p class="mt-6 text-slate-600 leading-relaxed">Apoios financeiros constantes garantem merenda escolar, moradia estudantil, rádio educativa e acesso à água, permitindo que a comunidade siga crescendo sem depender de ações pontuais.</p>
+          </div>
+          <div class="grid gap-4 sm:grid-cols-2">
+            <div class="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
+              <p class="text-3xl font-black text-forest-900">770</p>
+              <p class="text-xs uppercase tracking-[0.3em] text-slate-500 mt-2">Alunos apoiados</p>
+            </div>
+            <div class="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
+              <p class="text-3xl font-black text-forest-900">91</p>
+              <p class="text-xs uppercase tracking-[0.3em] text-slate-500 mt-2">Tabancas alcançadas</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

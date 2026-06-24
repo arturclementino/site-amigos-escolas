@@ -1,8 +1,8 @@
 ---
 // src/components/ProjectsGrid.astro
 ---
-<section id="projetos" class="py-24 bg-white border-t border-slate-100">
-  <div class="max-w-7xl mx-auto px-6">
+<section id="projetos" class="py-20 sm:py-24 bg-white border-t border-slate-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
     <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
       <div>
         <p class="text-xs font-bold text-ember tracking-[0.3em] uppercase mb-3">Nossos Projetos</p>
@@ -10,102 +10,211 @@
           Um ecossistema completo de transformação humana.
         </h2>
       </div>
-      <a href="/projetos" class="shrink-0 text-xs font-black text-forest-900 border border-forest-900 uppercase tracking-widest px-6 py-3 rounded-full hover:bg-forest-900 hover:text-white transition-all">
+      <a href="/projetos" class="shrink-0 text-xs font-black text-forest-900 border border-forest-900 uppercase tracking-widest px-5 py-3 rounded-full hover:bg-forest-900 hover:text-white transition-all">
         Ver Todos →
       </a>
     </div>
 
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      
-      <div class="project-card bg-[#F7F5F0] rounded-2xl p-8 flex flex-col">
-        <div class="w-11 h-11 rounded-xl bg-forest-900 flex items-center justify-center mb-6 shrink-0">
-          <span class="text-saffron text-xl">🏫</span>
+    <div class="relative">
+      <div class="absolute right-0 top-0 flex items-center gap-3 md:translate-y-1/2 md:-top-4">
+        <button type="button" id="carousel-prev" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white text-forest-900 shadow-sm transition hover:bg-slate-50">
+          ←
+        </button>
+        <button type="button" id="carousel-next" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white text-forest-900 shadow-sm transition hover:bg-slate-50">
+          →
+        </button>
+      </div>
+
+      <div id="projects-carousel" class="hide-scrollbar mt-6 flex snap-x snap-mandatory gap-4 sm:gap-6 overflow-x-auto pb-6 px-2 sm:px-1">
+        <div class="project-card group min-w-[90vw] sm:min-w-[38rem] md:min-w-[34rem] lg:min-w-[36rem] overflow-hidden rounded-[1.5rem] sm:rounded-[1.75rem] border border-slate-200 bg-white p-5 sm:p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl snap-center">
+          <div class="flex h-11 w-11 sm:h-12 sm:w-12 items-center justify-center rounded-3xl bg-forest-900 text-saffron text-lg sm:text-xl mb-5 sm:mb-6">
+            🏫
+          </div>
+          <p class="text-[10px] font-black text-ember uppercase tracking-[0.35em] mb-2">Projeto 01</p>
+          <h3 class="font-display text-xl font-bold text-forest-900 mb-3">Escola Betel de Cacine</h3>
+          <p class="text-sm text-slate-600 font-light leading-relaxed grow">
+            Ciclo educacional completo do pré-escolar ao 12.º ano, com merenda diária para 800+ alunos. A segurança alimentar é decisiva para reter crianças numa região onde a fome é um desafio cotidiano.
+          </p>
+          <div class="mt-6 pt-6 border-t border-slate-200">
+            <p class="text-2xl font-black text-forest-900 font-display">15.000+ <span class="text-sm font-bold text-slate-400">alunos</span></p>
+          </div>
         </div>
-        <p class="text-xs font-black text-ember uppercase tracking-widest mb-2">Projeto 01</p>
-        <h3 class="font-display text-xl font-bold text-forest-900 mb-3">Escola Betel de Cacine</h3>
-        <p class="text-sm text-slate-500 font-light leading-relaxed grow">
-          Ciclo educacional completo do pré-escolar ao 12.º ano, com merenda diária para 800+ alunos. A segurança alimentar é decisiva para reter crianças numa região onde a fome é um desafio cotidiano.
-        </p>
-        <div class="mt-6 pt-6 border-t border-slate-200">
-          <p class="text-2xl font-black text-forest-900 font-display">15.000+ <span class="text-sm font-bold text-slate-400">alunos</span></p>
+
+        <div class="project-card group min-w-[90vw] sm:min-w-[38rem] md:min-w-[34rem] lg:min-w-[36rem] overflow-hidden rounded-[1.5rem] sm:rounded-[1.75rem] border border-slate-200 bg-white p-5 sm:p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl snap-center">
+          <div class="flex h-11 w-11 sm:h-12 sm:w-12 items-center justify-center rounded-3xl bg-forest-900 text-saffron text-lg sm:text-xl mb-5 sm:mb-6">
+            🏠
+          </div>
+          <p class="text-[10px] font-black text-ember uppercase tracking-[0.35em] mb-2">Projeto 02</p>
+          <h3 class="font-display text-xl font-bold text-forest-900 mb-3">Casa do Estudante</h3>
+          <p class="text-sm text-slate-600 font-light leading-relaxed grow">
+            Internato para jovens de tabancas isoladas na floresta profunda, onde não há ensino secundário. Oferece moradia, alimentação e suporte tutorial para que a distância não seja um obstáculo ao futuro.
+          </p>
+          <div class="mt-6 pt-6 border-t border-slate-200">
+            <p class="text-sm font-bold text-slate-400 uppercase tracking-widest">Moradia · Alimentação · Tutoria</p>
+          </div>
+        </div>
+
+        <div class="project-card min-w-[90vw] sm:min-w-[38rem] md:min-w-[34rem] lg:min-w-[36rem] overflow-hidden rounded-[1.5rem] sm:rounded-[1.75rem] border border-transparent bg-forest-900 p-5 sm:p-6 shadow-sm text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl snap-center">
+          <div class="flex h-11 w-11 sm:h-12 sm:w-12 items-center justify-center rounded-3xl bg-saffron/20 border border-saffron/30 text-saffron text-lg sm:text-xl mb-5 sm:mb-6">
+            📻
+          </div>
+          <p class="text-[10px] font-black text-saffron uppercase tracking-[0.35em] mb-2">Projeto 03</p>
+          <h3 class="font-display text-xl font-bold text-white mb-3">Rádio Voz de Paz FM</h3>
+          <p class="text-sm text-white/70 font-light leading-relaxed grow">
+            107.0 MHz — a voz da região de Tombali. Ultrapassa as barreiras da floresta com campanhas de saúde pública, alfabetização à distância e promoção de uma cultura de paz nas comunidades.
+          </p>
+          <div class="mt-6 pt-6 border-t border-white/10">
+            <p class="text-sm font-bold text-saffron uppercase tracking-widest">107.0 MHz · No Ar</p>
+          </div>
+        </div>
+
+        <div class="project-card group min-w-[90vw] sm:min-w-[38rem] md:min-w-[34rem] lg:min-w-[36rem] overflow-hidden rounded-[1.5rem] sm:rounded-[1.75rem] border border-slate-200 bg-white p-5 sm:p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl snap-center">
+          <div class="flex h-11 w-11 sm:h-12 sm:w-12 items-center justify-center rounded-3xl bg-forest-900 text-saffron text-lg sm:text-xl mb-5 sm:mb-6">
+            💧
+          </div>
+          <p class="text-[10px] font-black text-ember uppercase tracking-[0.35em] mb-2">Projeto 04</p>
+          <h3 class="font-display text-xl font-bold text-forest-900 mb-3">Projeto Água Potável</h3>
+          <p class="text-sm text-slate-600 font-light leading-relaxed grow">
+            Perfuração e manutenção de poços em tabancas vulneráveis. Reduz drasticamente doenças de veiculação hídrica e mortalidade infantil — resolvendo um dos maiores problemas de saúde pública da Guiné-Bissau.
+          </p>
+          <div class="mt-6 pt-6 border-t border-slate-200">
+            <p class="text-sm font-bold text-slate-400 uppercase tracking-widest">Engenharia Humanitária</p>
+          </div>
+        </div>
+
+        <div class="project-card group min-w-[80vw] sm:min-w-[38rem] md:min-w-[34rem] lg:min-w-[36rem] overflow-hidden rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl snap-center">
+          <div class="flex h-12 w-12 items-center justify-center rounded-3xl bg-forest-900 text-saffron text-xl mb-6">
+            📚
+          </div>
+          <p class="text-[10px] font-black text-ember uppercase tracking-[0.35em] mb-2">Projeto 05</p>
+          <h3 class="font-display text-xl font-bold text-forest-900 mb-3">Biblioteca & Inclusão Digital</h3>
+          <p class="text-sm text-slate-600 font-light leading-relaxed grow">
+            Biblioteca Régulo Tcherno Camará com laboratório de informática. Conecta jovens ao conhecimento global e ao mercado de trabalho com ferramentas concretas de competitividade para além de Cacine.
+          </p>
+          <div class="mt-6 pt-6 border-t border-slate-200">
+            <p class="text-sm font-bold text-slate-400 uppercase tracking-widest">Tecnologia · Acervo · Pesquisa</p>
+          </div>
+        </div>
+
+        <div class="project-card min-w-[80vw] sm:min-w-[38rem] md:min-w-[34rem] lg:min-w-[36rem] overflow-hidden rounded-[1.75rem] border border-transparent bg-ember p-6 shadow-sm text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl relative snap-center">
+          <div class="absolute top-5 right-5">
+            <span class="bg-white text-ember text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full">Campanha Ativa</span>
+          </div>
+          <div class="flex h-12 w-12 items-center justify-center rounded-3xl bg-white/20 text-white text-xl mb-6">
+            🏟️
+          </div>
+          <p class="text-[10px] font-black text-white/60 uppercase tracking-[0.35em] mb-2">Projeto 06</p>
+          <h3 class="font-display text-xl font-bold text-white mb-3">Ginásio Poliesportivo</h3>
+          <p class="text-sm text-white/75 font-light leading-relaxed grow">
+            Complexo poliesportivo para lazer, cultura e integração social. O esporte é nossa ferramenta pedagógica para prevenir o envolvimento da juventude em situações de risco social.
+          </p>
+          <div class="mt-6 pt-6 border-t border-white/20">
+            <a href="/doar" class="inline-flex items-center gap-2 text-white font-bold text-sm hover:gap-4 transition-all">
+              Apoiar esta campanha →
+            </a>
+          </div>
         </div>
       </div>
 
-      <div class="project-card bg-[#F7F5F0] rounded-2xl p-8 flex flex-col">
-        <div class="w-11 h-11 rounded-xl bg-forest-900 flex items-center justify-center mb-6 shrink-0">
-          <span class="text-saffron text-xl">🏠</span>
-        </div>
-        <p class="text-xs font-black text-ember uppercase tracking-widest mb-2">Projeto 02</p>
-        <h3 class="font-display text-xl font-bold text-forest-900 mb-3">Casa do Estudante</h3>
-        <p class="text-sm text-slate-500 font-light leading-relaxed grow">
-          Internato para jovens de tabancas isoladas na floresta profunda, onde não há ensino secundário. Oferece moradia, alimentação e suporte tutorial para que a distância não seja um obstáculo ao futuro.
-        </p>
-        <div class="mt-6 pt-6 border-t border-slate-200">
-          <p class="text-sm font-bold text-slate-400 uppercase tracking-widest">Moradia · Alimentação · Tutoria</p>
-        </div>
+      <div class="mt-4 flex justify-center gap-3">
+        <button type="button" data-carousel-dot="0" class="h-3 w-3 rounded-full bg-slate-300 transition duration-300"></button>
+        <button type="button" data-carousel-dot="1" class="h-3 w-3 rounded-full bg-slate-300 transition duration-300"></button>
+        <button type="button" data-carousel-dot="2" class="h-3 w-3 rounded-full bg-slate-300 transition duration-300"></button>
+        <button type="button" data-carousel-dot="3" class="h-3 w-3 rounded-full bg-slate-300 transition duration-300"></button>
+        <button type="button" data-carousel-dot="4" class="h-3 w-3 rounded-full bg-slate-300 transition duration-300"></button>
+        <button type="button" data-carousel-dot="5" class="h-3 w-3 rounded-full bg-slate-300 transition duration-300"></button>
       </div>
-
-      <div class="project-card bg-forest-900 rounded-2xl p-8 flex flex-col">
-        <div class="w-11 h-11 rounded-xl bg-saffron/20 border border-saffron/30 flex items-center justify-center mb-6 shrink-0">
-          <span class="text-saffron text-xl">📻</span>
-        </div>
-        <p class="text-xs font-black text-saffron uppercase tracking-widest mb-2">Projeto 03</p>
-        <h3 class="font-display text-xl font-bold text-white mb-3">Rádio Voz de Paz FM</h3>
-        <p class="text-sm text-white/55 font-light leading-relaxed grow">
-          107.0 MHz — a voz da região de Tombali. Ultrapassa as barreiras da floresta com campanhas de saúde pública, alfabetização à distância e promoção de uma cultura de paz nas comunidades.
-        </p>
-        <div class="mt-6 pt-6 border-t border-white/10">
-          <p class="text-sm font-bold text-saffron uppercase tracking-widest">107.0 MHz · No Ar</p>
-        </div>
-      </div>
-
-      <div class="project-card bg-[#F7F5F0] rounded-2xl p-8 flex flex-col">
-        <div class="w-11 h-11 rounded-xl bg-forest-900 flex items-center justify-center mb-6 shrink-0">
-          <span class="text-saffron text-xl">💧</span>
-        </div>
-        <p class="text-xs font-black text-ember uppercase tracking-widest mb-2">Projeto 04</p>
-        <h3 class="font-display text-xl font-bold text-forest-900 mb-3">Projeto Água Potável</h3>
-        <p class="text-sm text-slate-500 font-light leading-relaxed grow">
-          Perfuração e manutenção de poços em tabancas vulneráveis. Reduz drasticamente doenças de veiculação hídrica e mortalidade infantil — resolvendo um dos maiores problemas de saúde pública da Guiné-Bissau.
-        </p>
-        <div class="mt-6 pt-6 border-t border-slate-200">
-          <p class="text-sm font-bold text-slate-400 uppercase tracking-widest">Engenharia Humanitária</p>
-        </div>
-      </div>
-
-      <div class="project-card bg-[#F7F5F0] rounded-2xl p-8 flex flex-col">
-        <div class="w-11 h-11 rounded-xl bg-forest-900 flex items-center justify-center mb-6 shrink-0">
-          <span class="text-saffron text-xl">📚</span>
-        </div>
-        <p class="text-xs font-black text-ember uppercase tracking-widest mb-2">Projeto 05</p>
-        <h3 class="font-display text-xl font-bold text-forest-900 mb-3">Biblioteca & Inclusão Digital</h3>
-        <p class="text-sm text-slate-500 font-light leading-relaxed grow">
-          Biblioteca Régulo Tcherno Camará com laboratório de informática. Conecta jovens ao conhecimento global e ao mercado de trabalho com ferramentas concretas de competitividade para além de Cacine.
-        </p>
-        <div class="mt-6 pt-6 border-t border-slate-200">
-          <p class="text-sm font-bold text-slate-400 uppercase tracking-widest">Tecnologia · Acervo · Pesquisa</p>
-        </div>
-      </div>
-
-      <div class="project-card bg-ember rounded-2xl p-8 flex flex-col relative overflow-hidden">
-        <div class="absolute top-5 right-5">
-          <span class="bg-white text-ember text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full">Campanha Ativa</span>
-        </div>
-        <div class="w-11 h-11 rounded-xl bg-white/20 flex items-center justify-center mb-6 shrink-0">
-          <span class="text-white text-xl">🏟️</span>
-        </div>
-        <p class="text-xs font-black text-white/60 uppercase tracking-widest mb-2">Projeto 06</p>
-        <h3 class="font-display text-xl font-bold text-white mb-3">Ginásio Poliesportivo</h3>
-        <p class="text-sm text-white/75 font-light leading-relaxed grow">
-          Complexo poliesportivo para lazer, cultura e integração social. O esporte é nossa ferramenta pedagógica para prevenir o envolvimento da juventude em situações de risco social.
-        </p>
-        <div class="mt-6 pt-6 border-t border-white/20">
-          <a href="/doar" class="inline-flex items-center gap-2 text-white font-bold text-sm hover:gap-4 transition-all">
-            Apoiar esta campanha →
-          </a>
-        </div>
-      </div>
-
     </div>
   </div>
-</section>
+
+  <script type="text/javascript">
+    const carousel = document.getElementById('projects-carousel');
+    const prevButton = document.getElementById('carousel-prev');
+    const nextButton = document.getElementById('carousel-next');
+    const dotButtons = document.querySelectorAll('[data-carousel-dot]');
+    const slideNodes = carousel ? Array.from(carousel.querySelectorAll('.snap-center')) : [];
+
+    let activeIndex = 0;
+    let autoplayTimeout;
+
+    const getSlideSize = () => {
+      if (!slideNodes.length) return Math.round(carousel.clientWidth * 0.8);
+      const slide = slideNodes[0];
+      const style = window.getComputedStyle(slide);
+      const gap = parseFloat(style.marginRight || '24');
+      return slide.offsetWidth + gap;
+    };
+
+    const updateDotState = (index) => {
+      dotButtons.forEach((button) => {
+        const dotIndex = Number(button.getAttribute('data-carousel-dot'));
+        button.classList.toggle('bg-forest-900', dotIndex === index);
+        button.classList.toggle('bg-slate-300', dotIndex !== index);
+      });
+    };
+
+    const scrollToIndex = (index) => {
+      if (!carousel) return;
+      const slideSize = getSlideSize();
+      carousel.scrollTo({ left: index * slideSize, behavior: 'smooth' });
+      activeIndex = index;
+      updateDotState(activeIndex);
+    };
+
+    const advanceSlide = () => {
+      const nextIndex = (activeIndex + 1) % slideNodes.length;
+      scrollToIndex(nextIndex);
+    };
+
+    const startAutoplay = () => {
+      autoplayTimeout = window.setTimeout(() => {
+        advanceSlide();
+        startAutoplay();
+      }, 5000);
+    };
+
+    const resetAutoplay = () => {
+      window.clearTimeout(autoplayTimeout);
+      startAutoplay();
+    };
+
+    const updateActiveIndex = () => {
+      if (!carousel || !slideNodes.length) return;
+      const size = getSlideSize();
+      const index = Math.round(carousel.scrollLeft / size);
+      if (index !== activeIndex) {
+        activeIndex = Math.min(Math.max(index, 0), slideNodes.length - 1);
+        updateDotState(activeIndex);
+      }
+    };
+
+    if (carousel && prevButton && nextButton && slideNodes.length) {
+      prevButton.addEventListener('click', () => {
+        const targetIndex = activeIndex === 0 ? slideNodes.length - 1 : activeIndex - 1;
+        scrollToIndex(targetIndex);
+        resetAutoplay();
+      });
+
+      nextButton.addEventListener('click', () => {
+        const targetIndex = (activeIndex + 1) % slideNodes.length;
+        scrollToIndex(targetIndex);
+        resetAutoplay();
+      });
+
+      dotButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          const index = Number(button.getAttribute('data-carousel-dot'));
+          scrollToIndex(index);
+          resetAutoplay();
+        });
+      });
+
+      carousel.addEventListener('scroll', () => {
+        updateActiveIndex();
+      }, { passive: true });
+
+      updateDotState(activeIndex);
+      startAutoplay();
+    }
+  </script>
+</section> 

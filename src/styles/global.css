@@ -11,12 +11,63 @@
   --color-saffron:    #E8A020;
 }
 
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-sans);
+  background-image:
+    radial-gradient(circle at top left, rgba(232,160,32,0.12), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(15,46,31,0.08), transparent 24%),
+    linear-gradient(180deg, #F7F5F0 0%, #F1EEE9 100%);
+  background-attachment: fixed;
+}
+
+body, button, input, select, textarea {
+  font-family: var(--font-sans);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+}
+
+::selection {
+  background: rgba(232,160,32,0.9);
+  color: #071A10;
+}
+
 @keyframes ticker {
   from { transform: translateX(0); }
   to   { transform: translateX(-50%); }
 }
-.ticker { animation: ticker 35s linear infinite; }
-.ticker-wrap { overflow: hidden; }
-.img-dim { filter: saturate(0.2) brightness(0.65); }
-.project-card { transition: transform 0.25s ease, box-shadow 0.25s ease; }
-.project-card:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.10); }
+.ticker {
+  animation: ticker 36s linear infinite;
+}
+.ticker-wrap {
+  overflow: hidden;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.img-dim {
+  filter: saturate(0.24) brightness(0.62);
+}
+.project-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.10);
+}
