@@ -62,7 +62,7 @@ h1, h2, h3, h4, h5, h6 {
   display: none;
 }
 .img-dim {
-  filter: saturate(0.24) brightness(0.62);
+    filter: saturate(0.45) brightness(0.85);
 }
 .project-card {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
